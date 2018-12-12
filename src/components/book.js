@@ -7,10 +7,10 @@ export default class Book extends React.Component {
 			const shelf = e.target.value;
 			const book = this.props;
 			const result = await update(book, shelf);
-				this.props.shelf = e.target.value;
-			this.props.moveBook(book,shelf,result);
+			
+			this.props.moveBook(book, shelf, result);
 		} catch (error) {
-			console.log(error)
+			console.log(error);
 		}
 	};
 	

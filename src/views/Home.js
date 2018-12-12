@@ -4,10 +4,11 @@ import FAB from '../components/fab';
 import {getAll} from '../BooksAPI';
 
 export default class Home extends React.Component {
-  async componentDidMount() {
+  async componentDidMount() {  //SETSTATE FUNCTION TO INVOKE RELOAD WITHOUT REFRESH??
     try {
       const books = await getAll();
         this.props.addBooks(books);
+        
 
     } catch( error ) {
       console.log(error)
